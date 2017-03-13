@@ -1,6 +1,5 @@
 #!/bin/bash
-if [ -z "$1" ]
-  then
+if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
     echo "Wrong parameters, usage: ./ifupdown.sh (ifup|ifdown) interfaceName until"
     echo "eg: ./ifupdown.sh ifup eth0 5 will bring up eth0:1,eth0:2,eth0:3 "
     echo "eg: ./ifupdown.sh ifdown eth0 5 will bring down eth0:1,eth0:2,eth0:3"
@@ -15,4 +14,3 @@ if [ -z "$1" ]
        echo "Setting up $interfaceName eth0:$i"
     done
 fi
-
