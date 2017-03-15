@@ -10,7 +10,7 @@ if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
 
     for i in $(seq 1 $until)
     do
-       $interfaceName interfaceName:$i
+       $action interfaceName:$i
        echo "Setting up $interfaceName eth0:$i"
     done
 fi
